@@ -1,8 +1,8 @@
 :root {
-  color-scheme: light;
+  color-scheme: dark;
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #f5f7ff;
-  color: #152238;
+  background: #07111d;
+  color: #111111;
 }
 
 * {
@@ -12,7 +12,8 @@
 body {
   margin: 0;
   padding: 2rem 1rem;
-  background: linear-gradient(135deg, #f5f7ff 0%, #e7ecff 100%);
+  background: radial-gradient(circle at top left, #153a6b 0%, #0b1830 35%, #060d16 100%);
+  min-height: 100vh;
 }
 
 .page-shell {
@@ -23,19 +24,15 @@ body {
 }
 
 .card {
-  background: white;
+  background: rgba(251, 248, 240, 0.96);
+  border: 1px solid #c8a53c;
   border-radius: 18px;
   padding: 1.25rem;
-  box-shadow: 0 10px 30px rgba(21, 34, 56, 0.08);
+  box-shadow: 0 0 24px rgba(12, 65, 140, 0.22);
 }
 
 .admin-card {
-  border: 1px solid #e4eaff;
-  padding-bottom: 1rem;
-}
-
-.admin-card {
-  border: 1px solid #e4eaff;
+  border: 1px solid #c8a53c;
   padding-bottom: 1rem;
   display: flex;
   justify-content: center;
@@ -44,10 +41,10 @@ body {
 .admin-toggle {
   width: auto;
   padding: 0.8rem 1.1rem;
-  background: #2d63ff;
-  color: white;
+  background: linear-gradient(135deg, #0d2d5f, #1f62d7);
+  color: #f4d36f;
   border-radius: 999px;
-  box-shadow: 0 8px 20px rgba(45, 99, 255, 0.2);
+  box-shadow: 0 10px 24px rgba(13, 45, 95, 0.3);
 }
 
 .admin-panel {
@@ -68,8 +65,8 @@ body {
 }
 
 .status-pill {
-  background: #f1f5f9;
-  color: #475569;
+  background: #f7e7b0;
+  color: #1f2a3b;
   padding: 0.35rem 0.65rem;
   border-radius: 999px;
   font-size: 0.9rem;
@@ -109,6 +106,8 @@ body {
 .hero h1 {
   margin: 0 0 0.5rem;
   font-size: 1.9rem;
+  color: #0d2d5f;
+  text-shadow: 0 0 12px rgba(12, 65, 140, 0.18);
 }
 
 .hero p {
@@ -143,9 +142,10 @@ select,
 textarea {
   width: 100%;
   padding: 0.8rem 0.9rem;
-  border: 1px solid #d3dcf1;
+  border: 1px solid #9ab0dc;
   border-radius: 12px;
-  background: #fbfcff;
+  background: #fdfcf7;
+  color: #111111;
 }
 
 button {
@@ -153,14 +153,16 @@ button {
   border-radius: 999px;
   padding: 0.8rem 1rem;
   cursor: pointer;
-  background: #2d63ff;
-  color: white;
+  background: linear-gradient(135deg, #0d2d5f, #1f62d7);
+  color: #f4d36f;
   font-weight: 600;
+  box-shadow: 0 8px 20px rgba(13, 45, 95, 0.2);
 }
 
 button.secondary {
-  background: #eef2ff;
-  color: #2d63ff;
+  background: #f7e7b0;
+  color: #13233d;
+  box-shadow: none;
 }
 
 .list-header {
@@ -178,8 +180,8 @@ button.secondary {
 }
 
 .badge {
-  background: #eef2ff;
-  color: #2d63ff;
+  background: #f7e7b0;
+  color: #1b2f4e;
   padding: 0.4rem 0.7rem;
   border-radius: 999px;
   font-size: 0.9rem;
@@ -199,8 +201,8 @@ button.secondary {
   align-items: center;
   gap: 1rem;
   padding: 0.8rem 0.9rem;
-  background: #fbfcff;
-  border: 1px solid #e6ebf8;
+  background: #fdfcf7;
+  border: 1px solid #dcc37d;
   border-radius: 12px;
 }
 
@@ -214,8 +216,8 @@ button.secondary {
 
 .remove-btn {
   padding: 0.45rem 0.7rem;
-  background: #ffe8e8;
-  color: #b42318;
+  background: #13233d;
+  color: #f4d36f;
 }
 
 .full-width {
@@ -261,7 +263,7 @@ button.secondary {
   min-height: 1.2rem;
   margin-top: -0.2rem;
   margin-bottom: 0.6rem;
-  color: #2d63ff;
+  color: #17438f;
   font-size: 0.95rem;
 }
 

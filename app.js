@@ -22,7 +22,7 @@ const itemTypeSelect = document.getElementById("item-type");
 const submitButton = form.querySelector('button[type="submit"]');
 
 let signups = [];
-let eventData = { title: "School Group Signup", date: "", location: "" };
+let eventData = { title: "HFCH Meal Signup", date: "", location: "" };
 let adminToken = "";
 let adminPanelOpen = false;
 
@@ -118,8 +118,13 @@ form.addEventListener("submit", async (event) => {
 });
 
 adminToggleButton.addEventListener("click", () => {
-  adminPanelOpen = !adminPanelOpen;
-  adminPanel.classList.toggle("hidden", !adminPanelOpen);
+  if (adminPanelOpen) {
+    return;
+  }
+
+  adminPanelOpen = true;
+  adminPanel.classList.remove("hidden");
+  updateAdminToggleVisibility();
 });
 
 adminSignOutButton.addEventListener("click", () => {
@@ -130,6 +135,7 @@ adminSignOutButton.addEventListener("click", () => {
   render();
   adminPanel.classList.add("hidden");
   adminPanelOpen = false;
+  updateAdminToggleVisibility();
 });
 
 adminLoginForm.addEventListener("submit", async (event) => {
@@ -245,7 +251,7 @@ async function loadData() {
 }
 
 function render() {
-  eventTitle.textContent = "School Group Signup";
+  eventTitle.textContent = eventData.title || "HFCH Meal Signup";
   const detailParts = [];
   if (eventData.date) {
     detailParts.push(`Date: ${eventData.date}`);
@@ -300,6 +306,11 @@ function updateAdminUI() {
   adminToggleButton.textContent = adminToken ? "Admin settings • signed in" : "Admin settings";
   adminSignOutButton.classList.toggle("hidden", !adminToken);
   adminAuthSuccess.classList.toggle("hidden", !adminToken);
+  updateAdminToggleVisibility();
+}
+
+function updateAdminToggleVisibility() {
+  adminToggleButton.classList.toggle("hidden", adminPanelOpen);
 }
 
 function escapeHtml(value) {

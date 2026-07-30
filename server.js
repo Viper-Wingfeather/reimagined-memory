@@ -12,7 +12,7 @@ function ensureDataFile() {
   if (!fs.existsSync(DATA_FILE)) {
     const initialData = {
       event: {
-        title: "School Group Signup",
+        title: "HFCH Meal Signup",
         date: "",
         location: "",
       },
