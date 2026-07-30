@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>School Group Signup</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="card hero">
+        <h1 id="event-title">School Group Signup</h1>
+      </section>
+
+      <section class="card list-card">
+        <div class="list-header">
+          <h2>Current signups</h2>
+        </div>
+        <div id="roster-details" class="roster-details">Loading event details…</div>
+        <div class="stats" id="stats"></div>
+        <ul id="signup-list" class="signup-list"></ul>
+        <button id="open-signup-modal" class="secondary full-width" type="button">I'll Bring Something!</button>
+      </section>
+
+      <section class="card admin-card">
+        <button id="admin-toggle" class="admin-toggle" type="button">Admin settings</button>
+        <div id="admin-panel" class="admin-panel hidden">
+          <div class="admin-header">
+            <h2>Admin controls</h2>
+            <div id="admin-status" class="status-pill">Not signed in</div>
+          </div>
+          <form id="admin-login-form" class="inline-form">
+            <input id="admin-password" type="password" placeholder="Admin password" />
+            <button type="submit">Sign in</button>
+          </form>
+          <div id="admin-auth-success" class="admin-auth-success hidden">Password accepted. You can now edit the event details.</div>
+          <form id="event-form" class="inline-form admin-only">
+            <input id="event-date" type="date" />
+            <input id="event-location" type="text" placeholder="Location" />
+            <button type="submit">Save event details</button>
+          </form>
+          <button id="admin-signout" class="secondary admin-signout hidden" type="button">Sign out</button>
+        </div>
+      </section>
+    </main>
+
+    <div id="signup-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="signup-modal-title">
+      <div class="modal-card">
+        <h2 id="signup-modal-title">Add your signup</h2>
+        <form id="signup-form">
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" placeholder="Enter your name" required />
+
+          <label for="item-type">What are you bringing?</label>
+          <select id="item-type" name="itemType" required>
+            <option value="">Choose one</option>
+            <option value="Lunch">Lunch</option>
+            <option value="Morning snack">Morning snack</option>
+            <option value="Afternoon snack">Afternoon snack</option>
+          </select>
+          <div id="signup-message" class="form-message" role="status" aria-live="polite"></div>
+
+          <label for="notes">Notes</label>
+          <textarea id="notes" name="notes" rows="3" placeholder="Any details for the group?"></textarea>
+
+          <div class="modal-actions">
+            <button type="button" id="close-signup-modal" class="secondary">Cancel</button>
+            <button type="submit">Save signup</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

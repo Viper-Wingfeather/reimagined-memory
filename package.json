@@ -1,0 +1,10 @@
+{
+  "name": "reimagined-memory-school-signup",
+  "version": "1.0.0",
+  "description": "A school-group signup app with admin controls",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  }
+}

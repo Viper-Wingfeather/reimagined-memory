@@ -1,0 +1,23 @@
+{
+  "event": {
+    "title": "School Group Signup",
+    "date": "2026-08-05",
+    "location": "George's House, Dehradun IT Park"
+  },
+  "signups": [
+    {
+      "id": "1785392970914-56f515deef3478",
+      "name": "Olivia",
+      "itemType": "Morning snack",
+      "notes": "",
+      "createdAt": "2026-07-30T06:29:30.914Z"
+    },
+    {
+      "id": "1785392913914-a93f32b72ac11",
+      "name": "Christopher",
+      "itemType": "Lunch",
+      "notes": "",
+      "createdAt": "2026-07-30T06:28:33.914Z"
+    }
+  ]
+}
