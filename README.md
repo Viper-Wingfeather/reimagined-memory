@@ -1,2 +1,1 @@
-# Homeschool Meal
-Signup
+# Homeschool Meal Signup
